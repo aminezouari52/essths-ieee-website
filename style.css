@@ -10,42 +10,57 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-y: scroll;
-  /* overflow-x: hidden; */
+overflow-x: hidden;
   margin: 0;
 }
 
 .front-page {
   position: relative;
-  background-image: url('./images/college.jpg');
+  background-image: url('./images/essths.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 630px;
-  width: 100vw;
+  height: 100vh;
+  width: calc(100vw - 17px);
 }
-
-.overlay {
+.front-page::before {
+  content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: calc(100vw - 17px);
 }
 
 .header {
-  position: relative;
-  padding: 20px;
+  position: fixed;
+  height: 100px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  z-index: 1;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.logo-white{
-  position: fixed;
+.header.scroll {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header.scroll .logo-first{
+  background-image: url('./images/logo-blue.png');
+}
+
+.header.scroll .nav {
+  color: #000;
+}
+
+.logo-first{
+  position: absolute;
   background-image: url('./images/logo-white.png');
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center center;
+  top: 20px;
   left: 0;
   height: 70px;
   width: 150px;
@@ -54,13 +69,14 @@ body {
   border-radius: 4px;
 }
 
-.logo-white:hover {
+.logo-first:hover {
   opacity: 0.5;
   transition: all 0.5s ease;
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
+  right: 10px;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -69,7 +85,7 @@ body {
 }
 
 .nav .item {
-  margin: 15px;
+  margin: 5px 15px;
   cursor: pointer;
   border-radius: 5px;
   padding: 5px;
@@ -82,13 +98,14 @@ body {
 }
 
 .welcome-container {
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #fff;
   margin-top: 100px;
+  z-index: 0;
 }
 
 .welcome-container h6 {
@@ -97,7 +114,7 @@ body {
   font-weight: lighter;
 }
 
-.welcome-container .button {
+.button {
   background-color: rgb(17, 84, 209);
   display: flex;
   align-items: center;
@@ -113,7 +130,7 @@ body {
   transition: all 1s ease;
 }
 
-.welcome-container .button:hover {
+.button:hover {
   box-shadow: 7px 10px 65px 13px rgba(36, 124, 161, 0.72);
   -webkit-box-shadow: 7px 10px 65px 13px rgba(36, 124, 161, 0.72);
   -moz-box-shadow: 7px 10px 65px 13px rgba(36, 124, 161, 0.72);
@@ -129,35 +146,34 @@ body {
     circle, #0077b6, #03045e);
   color: #e3e3e3;
   padding: 0 30px;
-  width: 100vw;
+  width: calc(100vw - 17px);
 }
 
 .who-we-are {
+  background-color: #0076b65b;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  margin: 20px 0 0 0;
-  background-color: #0076b65b;
-  border-radius: 5px;
+  width: 100vw;
   padding: 10px;
-  width: 90vw;
+  margin: 20px 0 0 0;
 }
 
-.who-we-are .logo-blue {
+.who-we-are .logo-middle {
   background-image: url('./images/logo-white.png');
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center center;
   height: 100px;
+  min-height: 150px;
   width: 400px;
 }
 .who-we-are p {
-  
-  font-size: 15px;
+  font-size: 20px;
   width: 80%;
   margin: 0;
 }
+
 
 .middle-page h3 {
   font-size: 40px;
@@ -214,7 +230,7 @@ body {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 20vw;
+  width: 130px;
 }
 
 .progress-steps .step {
@@ -231,3 +247,4 @@ background-color: #90e0ef;
 .progress-steps .step:hover {
   background-color: #90e0ef;
 }
+
