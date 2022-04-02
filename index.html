@@ -15,11 +15,32 @@
     <div class="logo-first"></div>
     <div class="nav">
       <div class="item">HOME</div>
-      <div class="item">ABOUT</div>
+      <div class="item about">ABOUT
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+        </div>
+      </div>
+
+      <div class="item about">ACTIVITIES
+        <i class="fa fa-caret-down"></i>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+        </div>
+      </div>
+
       <div class="item">ACTIVITIES</div>
       <div class="item">CALENDAR</div>
        <div class="item">CONTACT US</div>
-      <div class="item"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="item search" id="search">
+        <form>
+         <input type="text" class="input" placeholder="Search...">
+        </form>
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div></div>
      </div>
    </div>
    
@@ -32,25 +53,25 @@
   </div>
 
   <div class="middle-page">
-    <!-- <h3>Who we are:</h3> -->
+    <h3>Who We Are</h3>
 
     <div class="who-we-are">
       <div class="logo-middle"></div>
       <p>IEEE ESSTHS SB is one of the newest and most active SB's in Tunisia section, Founded by 12 students in H.S Sciences & Technologies Hammem Sousse in 2020. We currently have <strong>54</strong> highly active members.<br><br>Our vision is to improve the overall experience of students in our school and all over Tunisia by providing workshops & training sessions and competing in national & international challenges.</p>
     </div>
 
-    <h3>Our Upcoming Events:</h3>
+    <h3>Our Upcoming Events</h3>
 
     <div class="slider">
       <div class="slide" style="background-image: url('./images/card1.jpg')">1</div>
       <div class="slide" style="background-image: url('./images/card2.jpg')">2</div>
       <div class="slide" style="background-image: url('./images/card3.jpg')">3</div>
-      <div class="slide"style="background-image: url('./images/card4.jpg')">4</div>
+      <div class="slide" style="background-image: url('./images/card4.jpg')">4</div>
       <div class="slide" style="background-image: url('./images/essths.jpg')">5</div>
 
-      <button class="btn next"><i class="fas fa-arrow-right"></i></button>
+      <button class="btn next" id="right"><i class="fas fa-arrow-right"></i></button>
 
-      <button class="btn prev"><i class="fas fa-arrow-left"></i></button>
+      <button class="btn prev" id="left"><i class="fas fa-arrow-left"></i></button>
 
       <div class="progress-steps">
         <div class="step active"></div>
@@ -61,48 +82,97 @@
       </div>
     </div>
     
-    <h4>Our Lastest Events:</h4>
-
+    <h3>Our Latest Events</h3>
+    
     <div class="events-wrapper">
       <div class="event">
-        <div class="event-img">img-div</div>
-      
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
         <h3>lets learn flutter</h3>
-        
-        <h6>Lorem ipsum dolor sit amet.</h6>
-
-        <small>Read More</small>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
       </div>
 
       <div class="event">
-        <div class="event-img">img-div</div>
-      
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
         <h3>lets learn flutter</h3>
-        
-        <h6>Lorem ipsum dolor sit amet.</h6>
-
-        <small>Read More</small>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
       </div>
 
       <div class="event">
-        <div class="event-img">img-div</div>
-      
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
         <h3>lets learn flutter</h3>
-        
-        <h6>Lorem ipsum dolor sit amet.</h6>
-
-        <small>Read More</small>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
       </div>
+
+      <div class="event">
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
+        <h3>lets learn flutter</h3>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
+      </div>
+
+      <div class="event">
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
+        <h3>lets learn flutter</h3>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
+      </div>
+
+      <div class="event">
+        <div class="event-img" style="background-image: url('./images/card4.jpg')"><i class="fas fa-arrow-right"></i></div>
+        <h3>lets learn flutter</h3>
+        <h6>Date: 28 Nov 2021</h6>
+        <h6>Time: 9 AM to 1 PM</h6>
+      </div>
+
+      <button class="button middle">See More Events</button>
     </div>
-    <button class="middle-page-button">Let's See More Events</button>
   </div>
+  
+  <h3>Get In Touch!</h3>
 
   <div class="last-page">
-    <h1>LAST PAGE</h1>
-    <h3>Get in touch</h3>
-    <h3>Get in touch</h3>
-    <h3>Get in touch</h3>
-    <h3>Get in touch</h3>
+    <h6>Find us anywhere!</h6>
+    <div>location-icon
+      <h3>Find us at our school</h3>
+      <h6>Rue Lamine Abassi، نهج لمين العباسي</h6>
+      <h6>Hammam Sousse 4011</h6>
+    </div>
+
+    <div>phone-icon
+      <h3>Give us a ring</h3>
+      <h6>Kayoum Djedidi : Chairman</h6>
+      <h6>+216 52 227 099</h6><br>
+      
+      <h6>Kayoum Djedidi : Chairman</h6>
+      <h6>+216 52 227 099</h6><br>
+      
+      <h6>Kayoum Djedidi : Chairman</h6>
+      <h6>+216 52 227 099</h6><br>
+
+      <h6>Mon - Sat, 8:00 AM - 10:00 PM</h6>
+    </div>
+
+    <button class="button-contact">Contact us</button>
+    
+    <div class="footer">
+      <div>fqsd</div>
+      <div>qfsd</div>
+      <div>qsdfq</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+      <div>qsdf</div>
+    </div>
+
+    <div>All rights reserved</div>
   </div>
 
   <script src="script.js"></script>
