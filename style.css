@@ -45,6 +45,12 @@ body {
   width: calc(100vw - 17px);
 }
 
+.other-pages.executive-committe {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
 
 .header {
   position: fixed;
@@ -522,6 +528,31 @@ margin: 0 auto;
 .bottom-nav .item:hover {
   color: grey;
   transition: color 0.3s ease;
+}
+
+.elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px;
+}
+
+.profile-picture {
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 @media (max-width: 970px) {

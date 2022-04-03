@@ -11,6 +11,9 @@ const btnRight = document.getElementById('right')
 
 let counter = 0
 
+setBG()
+setStep()
+
 steps.forEach((step, i) => {
   step.addEventListener('click', () => {
     counter = i
@@ -18,9 +21,6 @@ steps.forEach((step, i) => {
     setStep()
   })
 })
-
-setBG()
-setStep()
 
 function setStep() {
   removeActiveSteps()
