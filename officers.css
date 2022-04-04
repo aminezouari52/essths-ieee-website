@@ -7,6 +7,8 @@
   --light-blue: #90e0ef;
   --overlay: rgba(0, 0, 0, 0.4);
   --box-shadow-black: 0px 7px 20px 0px rgba(0,0,0,0.5);
+  --primary-color: #03045e;
+  --secondary-color: #0077b6;
 }
 
 * {
@@ -27,7 +29,8 @@ body {
   margin: 0;
 }
 
-.header {
+
+.header {  
   position: fixed;
   background-color: var(--white);
   top: 0;
@@ -40,10 +43,6 @@ body {
   z-index: 10;
 }
 
-.header .logo-first{
-  background-image: url('./images/logo-blue.png');
-}
-
 .header .input {
   border-radius: 0;
   border-bottom: 1px solid var(--grey);
@@ -51,7 +50,7 @@ body {
 
 .logo-first{
   position: absolute;
-  background-image: url('./images/logo-white.png');
+  background-image: url('./images/logo-blue.png');
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center center;
@@ -159,12 +158,28 @@ input:focus {
   display: none;
 }
 
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  color: var(--primary-color);
+  font-size: 60px;
+  margin: 150px 0 0 0;
+}
+
+.content h3 {
+  margin: 100px 0 0;
+  color: var(--secondary-color);
+  font-size: 30px;
+}
 
 .elements {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 90vw;
   margin: 10px;
 }
 
@@ -183,6 +198,47 @@ input:focus {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+}
+
+.element h2 {
+  margin: 20px 0 0 0;
+}
+
+.element h5 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+
+.social-media {
+  display: flex;
+  font-size: 25px;
+}
+
+.social-media .fab {
+  margin: 5px;
+  color: var(--black);
+  transition: all 0.3s ease;
+
+}
+
+.social-media .fab:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+.social-media .fa-facebook:hover {
+  color: #4267B2;
+}
+
+.social-media .fa-instagram:hover {
+  color: #8a3ab9;
+}
+
+.social-media .fa-linkedin:hover {
+  color: #0E76A8;
 }
 
 .footer {
@@ -216,6 +272,12 @@ input:focus {
   font-size: 10px;
   letter-spacing: 3px;
   font-weight: lighter;
+}
+
+@media (max-width: 675px) {
+  .elements {
+    flex-direction: column;
+  }
 }
 
 @keyframes dropdown {
