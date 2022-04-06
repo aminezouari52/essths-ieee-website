@@ -173,6 +173,14 @@ input:focus {
   width: 90vw;
 }
 
+.title {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  color: #f78da7;
+}
+
 .chapters {
   display: flex;
   justify-content: center;
