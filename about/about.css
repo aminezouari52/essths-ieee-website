@@ -164,7 +164,7 @@ input:focus {
   display: none;
 }
 
-.logo {
+.cs-logo {
   margin-top: 150px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -311,7 +311,7 @@ input:focus {
 }
 
 @media (max-width: 950px) {
-  .logo {
+  .cs-logo {
     margin-top: 100px;
   }
 
