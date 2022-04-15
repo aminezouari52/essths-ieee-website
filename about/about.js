@@ -4,6 +4,9 @@ const search = document.getElementById('search')
 const input = document.querySelector('.input')
 const form = document.querySelector('form')
 
+const btn = document.querySelector('.btn')
+const paragraph = document.querySelector('.para')
+
 search.addEventListener('click', (event) => {
   hideNav()
   search.classList.add('active')
@@ -32,4 +35,10 @@ function showNav() {
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   window.find(input.value)
+})
+
+btn.addEventListener('click', () => {
+  style = paragraph.style.display
+  if (style === 'block') paragraph.style.display = 'none'
+  else paragraph.style.display = 'block'
 })
